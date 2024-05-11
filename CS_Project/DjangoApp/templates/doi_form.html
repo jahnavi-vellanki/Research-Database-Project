@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOI Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_doi_form.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'images/manipal_logo.png' %}" alt="Manipal Logo" class="logo">
+        <div class="header-right">
+            <button onclick="redirect()">Change Password</button>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+
+    </header>
+    <div class="container">
+        <h1>Enter DOI</h1>
+        <form action="{% url 'main_form' %}" method="get">
+            <input type="text" name="doi" placeholder="Enter DOI here" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function redirect() {
+            window.location.href = "/admin/password_change/";
+        }
+    </script>
+</body>
+
+</html>

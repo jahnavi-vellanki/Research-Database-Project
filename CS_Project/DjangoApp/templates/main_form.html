@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopus Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_main_form.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'images/manipal_logo.png' %}" alt="Manipal Logo" class="logo">
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="logoutbutton" type="submit">Logout</button>
+        </form>
+    </header>
+    <div class="container">
+        <h1>Scopus Details</h1>
+        <div class="author-details">
+            <p>Author IDs:</p>
+            <input type="text" class="textbox" value="{{ author_ids }}" required>
+            <p>DOI</p>
+            <input type="text" class="textbox" value="{{ doi_id }}" required>
+            <p>Author Names:</p>
+            <input type="text" class="textbox" value="{{ author_names }}" required>
+            <p>Publisher ID:</p>
+            <input type="text" class="textbox" value="{{ publisher_id }}" required>
+            <p>Publisher Name:</p>
+            <input type="text" class="textbox" value="{{ publisher_name }}" required>
+            <p>Paper ID:</p>
+            <input type="text" class="textbox" value="{{ paper_id }}" required>
+            <p>Title of Paper:</p>
+            <input type="text" class="textbox" value="{{ title_of_paper }}" required>
+            <p>Name of Journal:</p>
+            <input type="text" class="textbox" value="{{ name_of_journal }}" required>
+            <p>Scopus Indexed:</p>
+            <input type="text" class="textbox" value="{{ scopus_indexed }}" required>
+            <p>WOS Indexed:</p>
+            <input type="text" class="textbox" value="{{ wos_indexed }}" required>
+            <p>Scopus Quartile:</p>
+            <input type="text" class="textbox" value="{{ scopus_quartile }}" required>
+            <p>WOS Impact Factors:</p>
+            <input type="text" class="textbox" value="{{ wos_impact_factors }}" required>
+            <p>Volume Number:</p>
+            <input type="text" class="textbox" value="{{ volume_number }}" required>
+            <p>Issue Number:</p>
+            <input type="text" class="textbox" value="{{ issue_number }}" required>
+            <p>Page Number:</p>
+            <input type="text" class="textbox" value="{{ page_number }}" required>
+            <p>Date of Publication:</p>
+            <input type="text" class="textbox" value="{{ date_of_publication }}" required>
+            <p>Citation Count:</p>
+            <input type="text" class="textbox" value="{{ citation_count }}" required>
+        </div>
+        <button class="submitbutton" type="submit">Approve</button>
+    </div>
+
+    <script>
+        function logout() {
+            alert("Logged out successfully!");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

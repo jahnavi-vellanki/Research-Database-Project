@@ -1,0 +1,73 @@
+{
+    "abstracts-retrieval-response": {
+        "affiliation": {
+            "affiliation-city": "Manipal",
+            "affilname": "Manipal Institute of Technology",
+            "affiliation-country": "India"
+        },
+        "coredata": {
+            "srctype": "p",
+            "eid": "2-s2.0-85059991093",
+            "prism:coverDate": "2018-11-29",
+            "prism:aggregationType": "Conference Proceeding",
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85059991093",
+            "subtypeDescription": "Conference Paper",
+            "dc:creator": {
+                "author": [
+                    {
+                        "ce:given-name": "Prakash K.",
+                        "preferred-name": {
+                            "ce:given-name": "Prakash K.",
+                            "ce:initials": "P.K.",
+                            "ce:surname": "Aithal",
+                            "ce:indexed-name": "Aithal P."
+                        },
+                        "@seq": "1",
+                        "ce:initials": "P.K.",
+                        "@_fa": "true",
+                        "affiliation": {
+                            "@id": "60028079",
+                            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60028079"
+                        },
+                        "ce:surname": "Aithal",
+                        "@auid": "36663399300",
+                        "author-url": "https://api.elsevier.com/content/author/author_id/36663399300",
+                        "ce:indexed-name": "Aithal P.K."
+                    }
+                ]
+            },
+            "link": [
+                {
+                    "@_fa": "true",
+                    "@rel": "self",
+                    "@href": "https://api.elsevier.com/content/abstract/scopus_id/85059991093"
+                },
+                {
+                    "@_fa": "true",
+                    "@rel": "scopus",
+                    "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85059991093&origin=inward"
+                },
+                {
+                    "@_fa": "true",
+                    "@rel": "scopus-citedby",
+                    "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85059991093&origin=inward"
+                }
+            ],
+            "prism:isbn": "9781538635704",
+            "prism:publicationName": "Proceedings of the 2nd International Conference on Trends in Electronics and Informatics, ICOEI 2018",
+            "source-id": "21100894633",
+            "citedby-count": "1",
+            "subtype": "cp",
+            "prism:pageRange": "132-135",
+            "dc:title": "Development of Weblog Pre-Processing System: A Parallel Approach",
+            "prism:endingPage": "135",
+            "openaccess": "0",
+            "openaccessFlag": "false",
+            "prism:doi": "10.1109/ICOEI.2018.8553715",
+            "prism:startingPage": "132",
+            "article-number": "8553715",
+            "dc:identifier": "SCOPUS_ID:85059991093",
+            "dc:publisher": "Institute of Electrical and Electronics Engineers Inc."
+        }
+    }
+}
