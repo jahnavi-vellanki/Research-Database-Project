@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from DjangoApp import views
 from django.contrib.auth import views as auth_views
+from DjangoApp.views import PapersListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     path('main_form/', views.main_form, name='main_form'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('author/<int:author_id>/', views.author_detail, name='author_detail'),
+    # path('author/<int:author_id>/', views.author_detail, name='author_detail'),
     path('paper/<int:paper_id>/', views.paper_detail, name='paper_detail'),
+    path('submit_paper/', views.submit_paper, name='submit_paper'),
+    path('papers/', PapersListView.as_view(), name='view_papers'),
 ]

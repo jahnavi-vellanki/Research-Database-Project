@@ -14,6 +14,7 @@
     <header>
         <img src="{% static 'images/manipal_logo.png' %}" alt="Manipal Logo" class="logo">
         <div class="header-right">
+            <button onclick="papers()">View Papers</button>
             <button onclick="redirect()">Change Password</button>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
@@ -32,6 +33,9 @@
     <script>
         function redirect() {
             window.location.href = "/admin/password_change/";
+        }
+        function papers() {
+            window.location.href = "/papers/";
         }
     </script>
 </body>

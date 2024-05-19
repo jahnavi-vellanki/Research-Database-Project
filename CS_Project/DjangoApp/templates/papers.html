@@ -1,0 +1,31 @@
+{% load static %}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <title>Papers</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles_papers.css' %}">
+    </head>
+    <body>
+        <header>
+            <img src="{% static 'images/manipal_logo.png' %}" alt="Manipal Logo" class="logo">
+            <div class="header-right">
+                <button onclick="download()">Download</button>
+                <button onclick="redirect()">Change Password</button>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
+        </header>
+        {% render_table table %}
+        <script>
+            function redirect() {
+                window.location.href = "/admin/password_change/";
+            }
+            function download() {
+                window.location.href = "/papers?_export=xlsx";
+            }
+        </script>
+    </body>
+</html>

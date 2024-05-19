@@ -20,51 +20,45 @@
     </header>
     <div class="container">
         <h1>Scopus Details</h1>
-        <div class="author-details">
+        <form method="post" action="{% url 'submit_paper' %}" class="author-details">
+            {% csrf_token %}
             <p>Author IDs:</p>
-            <input type="text" class="textbox" value="{{ author_ids }}" required>
+            <input type="text" class="textbox" name="author_ids" value="{{ author_ids }}">
             <p>DOI</p>
-            <input type="text" class="textbox" value="{{ doi_id }}" required>
+            <input type="text" class="textbox" name="doi_id" value="{{ doi_id }}" required>
             <p>Author Names:</p>
-            <input type="text" class="textbox" value="{{ author_names }}" required>
+            <input type="text" class="textbox" name="author_names" value="{{ author_names }}">
             <p>Publisher ID:</p>
-            <input type="text" class="textbox" value="{{ publisher_id }}" required>
+            <input type="text" class="textbox" name="publisher_id" value="{{ publisher_id }}">
             <p>Publisher Name:</p>
-            <input type="text" class="textbox" value="{{ publisher_name }}" required>
+            <input type="text" class="textbox" name="publisher_name" value="{{ publisher_name }}">
             <p>Paper ID:</p>
-            <input type="text" class="textbox" value="{{ paper_id }}" required>
+            <input type="text" class="textbox" name="paper_id" value="{{ paper_id }}">
             <p>Title of Paper:</p>
-            <input type="text" class="textbox" value="{{ title_of_paper }}" required>
+            <input type="text" class="textbox" name="title_of_paper" value="{{ title_of_paper }}">
             <p>Name of Journal:</p>
-            <input type="text" class="textbox" value="{{ name_of_journal }}" required>
+            <input type="text" class="textbox" name="name_of_journal" value="{{ name_of_journal }}">
             <p>Scopus Indexed:</p>
-            <input type="text" class="textbox" value="{{ scopus_indexed }}" required>
+            <input type="text" class="textbox" name="scopus_indexed" value="{{ scopus_indexed }}" required>
             <p>WOS Indexed:</p>
-            <input type="text" class="textbox" value="{{ wos_indexed }}" required>
+            <input type="text" class="textbox" name="wos_indexed" value="{{ wos_indexed }}">
             <p>Scopus Quartile:</p>
-            <input type="text" class="textbox" value="{{ scopus_quartile }}" required>
+            <input type="text" class="textbox" name="scopus_quartile" value="{{ scopus_quartile }}">
             <p>WOS Impact Factors:</p>
-            <input type="text" class="textbox" value="{{ wos_impact_factors }}" required>
+            <input type="text" class="textbox" name="wos_impact_factors" value="{{ wos_impact_factors }}">
             <p>Volume Number:</p>
-            <input type="text" class="textbox" value="{{ volume_number }}" required>
+            <input type="text" class="textbox" name="volume_number" value="{{ volume_number }}">
             <p>Issue Number:</p>
-            <input type="text" class="textbox" value="{{ issue_number }}" required>
+            <input type="text" class="textbox" name="issue_number" value="{{ issue_number }}">
             <p>Page Number:</p>
-            <input type="text" class="textbox" value="{{ page_number }}" required>
+            <input type="text" class="textbox" name="page_number" value="{{ page_number }}">
             <p>Date of Publication:</p>
-            <input type="text" class="textbox" value="{{ date_of_publication }}" required>
+            <input type="text" class="textbox" name="date_of_publication" value="{{ date_of_publication }}">
             <p>Citation Count:</p>
-            <input type="text" class="textbox" value="{{ citation_count }}" required>
-        </div>
-        <button class="submitbutton" type="submit">Approve</button>
+            <input type="text" class="textbox" name="citation_count" value="{{ citation_count }}">  
+            <button class="submitbutton" type="submit">Approve</button>  
+        </form>
     </div>
-
-    <script>
-        function logout() {
-            alert("Logged out successfully!");
-            window.location.href = "login.html";
-        }
-    </script>
 </body>
 
 </html>
